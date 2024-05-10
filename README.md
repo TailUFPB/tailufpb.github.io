@@ -1,46 +1,145 @@
-# Getting Started with Create React App
+# Como iniciar
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Projeto criado com [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+_Primeiramente, é necessário have o Node.js baixado. [Download](https://nodejs.org/en/download/current "Baixar Node.js")_
 
-In the project directory, you can run:
+## Iniciando e editando o site
+
+Dentro da pasta principal, se for a primeira vez rodando o site, utilize o comando:
+
+### `npm i`
+
+para baixar os módulos. E para iniciar o site, utilize:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Então será rodado o site em modo de desenvolvedor.
+Abra [http://localhost:3000](http://localhost:3000) para ver o site no browser.
 
-The page will reload if you make edits.\
+The page will reload if you make edits.
 You will also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Inicia o executor de testes no modo interativo de observação.
+Veja a seção sobre [execução de testes](https://facebook.github.io/create-react-app/docs/running-tests) para mais informações.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Compila o aplicativo para produção na pasta `build`.
+Ele agrupa corretamente o React no modo de produção e otimiza a compilação para obter o melhor desempenho.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+A compilação é minificada e os nomes de arquivo incluem os hashes.
+Seu aplicativo está pronto para ser implantado!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Veja a seção sobre [implantação](https://facebook.github.io/create-react-app/docs/deployment) para mais informações.
 
-### `npm run eject`
+## Utilizando o GitHub
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Para garantir que cada pessoa do projeto trabalhe de forma independente e sem interferir no trabalho dos outros, é importante seguir um fluxo de trabalho utilizando branches no GitHub.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Criando uma Branch
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. **Abra o Repositório** : Vá para o repositório do projeto no GitHub.
+2. **Crie uma Branch** : No menu suspenso de seleção de branch, digite um nome descritivo para sua nova branch e pressione Enter. O nome pode ser o seu nome "Ex: Tiago" ou a(s) página(s) que estão sendo editada "Ex: Pag Rotações". Portanto que fique claro quem / o que está sendo editada nela.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Trocando de Branch no VS Code
 
-## Learn More
+1. **Abrindo o VS Code** : Inicie o Visual Studio Code.
+2. **Abrindo o Terminal Integrado** : No menu superior, vá em "Terminal" e selecione "Novo Terminal" para abrir um terminal integrado ao VS Code.
+3. **Verificando Branches** : No terminal, você pode verificar todas as branches disponíveis no repositório usando o comando:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```python
+git branch
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **Trocar para uma Branch Existente** : Se você deseja mudar para uma branch existente, use o comando:
+
+```python
+git switch nome_da_branch
+```
+
+Por exemplo, se você quiser mudar para a branch "Tiago", você usaria:
+
+```python
+git switch Tiago
+```
+
+### Dando Commit no VS Code
+
+1. **Verificando Status de Mudanças** : Antes de dar commit, verifique quais arquivos foram modificados, adicionados ou excluídos usando o comando:
+
+```python
+git status
+```
+
+1. **Adicionando Arquivos para o Commit** : Se você deseja adicionar todos os arquivos modificados para o commit, use o comando:
+
+```python
+git add .
+```
+
+Se você deseja adicionar apenas arquivos específicos, substitua "." pelo nome do arquivo.
+
+1. **Commitando as Mudanças** : Agora, você pode dar o commit às mudanças usando o comando:
+
+```python
+git commit -m "Mensagem do commit aqui"
+```
+
+Substitua "Mensagem do commit aqui" por uma descrição breve e clara do que foi alterado.
+
+### Dando Push na Branch no VS Code
+
+1. **Enviando as Alterações para o Repositório Remoto** : Após dar commit às suas mudanças, você pode enviá-las para o repositório remoto usando o comando:
+
+```python
+git push origin nome_da_branch
+```
+
+Por exemplo, se você estiver na branch "Tiago" e deseja enviar as alterações para essa branch no repositório remoto, você usaria:
+
+```python
+git push origin Tiago
+```
+
+### Atualizando seu Repositório Local
+
+1. **Verificando Mudanças no Repositório Remoto** : Antes de atualizar seu repositório local, é uma boa prática verificar se há mudanças no repositório remoto. Você pode fazer isso usando o comando:
+
+```python
+git fetch
+```
+
+1. **Atualizando sua Branch com as Alterações do Repositório Remoto** : Para atualizar sua branch local com as alterações do repositório remoto, use o comando:
+
+```python
+git switch nome_da_branch
+```
+
+Por exemplo, se você deseja atualizar a branch "Tiago" com as alterações do repositório remoto, você usaria:
+
+```python
+git switch Tiago
+```
+
+1. **Fazendo o Pull das Alterações do Repositório Remoto** : Depois de mudar para a branch que deseja atualizar, você pode fazer o pull das alterações do repositório remoto para o seu repositório local usando o comando:
+
+```python
+git pull origin nome_da_branch
+```
+
+Por exemplo, se você estiver na branch "Tiago" e deseja trazer as alterações do repositório remoto para essa branch, você usaria:
+
+```python
+git pull origin Tiago
+```
+
+Estes comandos básicos permitem que você gerencie suas branches, faça commits e mantenha seu repositório local atualizado com as alterações do repositório remoto diretamente do VS Code, de forma simples e direta. Se preferir, você pode executar esses mesmos comandos no terminal do seu sistema operacional.
+
+## Saiba Mais
+
+Você pode aprender mais na [documentação do Create React App](https://facebook.github.io/create-react-app/docs/getting-started).
+
+Para aprender React, confira a [documentação do React](https://reactjs.org/).
