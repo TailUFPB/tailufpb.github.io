@@ -1,4 +1,39 @@
-# Como iniciar
+# Informações Básicas
+
+O repositório já possui todos os arquivos das páginas já conectados ao App e com seus lugares já organizados. Basta editar a página respectiva para funcionar. O projeto é feito em React com **typescript**
+
+[**_ACESSAR DESIGN DO SITE_**](https://www.figma.com/design/BQmNtZZtzCId505RwOadRW/TAIL?node-id=0%3A1&t=zm3aeaX4mgmuVxa9-1 "Figma")
+
+As páginas que necessitam de dados já estão com eles implementados e pronto para usarem. Os dados presentes são poucos, mas em teoria suficientes para já faz uma implementação dinâmica e responsiva.
+
+As colunas referentes às fotos ainda não estão presentes. Para quem for implementar algo com imagens, faça, por enquanto, hardcoded. Posteriormente adicionamos os dados novos com imagens.
+
+Prazo (em teoria): **27/05**
+
+## Divisão das telas
+
+Assim ficou a divisão das telas (se eu me lembro bem, qualquer coisa, editar):
+
+- Tiago: Landing Page e Rotações (Página com a lista das rotações para clicar e acessar cada uma = "Rotacoes")
+- Tiago: Footer e NavBar
+- Duda: Membros
+- Bruna: Projetos
+- Raphael: Rotação (Página de uma rotação específica, todos os seus projetos = "RotacaoTemplate")
+- Ana: Contato e Sobre
+
+Tanto o Footer como a NabBar são elementos compartilhados entre todos.
+
+## Importante
+
+Abaixo vai ter alguns tutoriais básicos de react, assim como uma parte ensinando como iniciar o site e, por fim, uma parte indicando o uso do github. É importante seguir a questão das diferentes branches para não ter conflitos.
+
+## Tutoriais e materiais
+
+- [Playlist React Typescript](https://www.youtube.com/watch?v=antT8q5JFxA&list=PL29TaWXah3iZktD5o1IHbc7JDqG_80iOm&index=5)
+- [Explicação sobre o que é React](https://www.youtube.com/watch?v=N3AkSS5hXMA&t)
+- [Explicação sobre o que é React ainda mais simples (é para JS mas a lógica persiste)](https://www.youtube.com/watch?v=Tn6-PIqc4UM)
+
+# Como iniciar o site
 
 Projeto criado com [Create React App](https://github.com/facebook/create-react-app).
 
