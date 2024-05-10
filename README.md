@@ -37,7 +37,7 @@ Abaixo vai ter alguns tutoriais básicos de react, assim como uma parte ensinand
 
 Projeto criado com [Create React App](https://github.com/facebook/create-react-app).
 
-_Primeiramente, é necessário have o Node.js baixado. [Download](https://nodejs.org/en/download/current "Baixar Node.js")_
+_Primeiramente, é necessário haver o Node.js baixado. [Download](https://nodejs.org/en/download/current "Baixar Node.js")_
 
 ## Iniciando e editando o site
 
