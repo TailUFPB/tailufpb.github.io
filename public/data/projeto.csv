@@ -1,0 +1,7 @@
+id_proj,nome_proj,descricao_proj,tipo_proj,completo_proj,link_proj
+464ab96d-7323-4c79-9359-4878c608c2a4,Dashboard TAIL,Criação de um banco de dados e dashboard da TAIL.,Aplicação,False,
+3e32a46f-ba04-4971-846a-98361f9b4b8c,Waveflow,Desenvolver uma API de reconhecimento automático de cifras e acordes.,Aplicação,False,
+63bf5ded-906c-414e-af4b-63a15f5d3af1,Site TAIL,Criação do Site da TAIL,Aplicação,False,
+af6ba826-ca50-48ff-b017-e0d18f7f49bd,Competição Kaggle,Competição na plataforma Kaggle,Competição,False,
+5e501636-0813-4161-874a-5d4743bf4a80,GoalBall,Sistema de pontuação automática para jogos de Goalball,Aplicação,False,
+40248c50-81c3-46fe-b357-4d4e3fd2e9a3,Recomendador de Filmes,Sistema de recomendação de filmes,Aplicação,False,
