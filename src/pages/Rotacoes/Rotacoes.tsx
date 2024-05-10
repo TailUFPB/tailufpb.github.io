@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { parseCsv } from '../../utils/csvUtils';  
 import { Rotacao } from '../../types/csvTypes';  
 
+import './Rotacoes.css';
 // import component1, component2 from '../../components/Rotacoes/{Component}';
 
 const Rotacoes: React.FC = () => {
@@ -27,7 +28,7 @@ const Rotacoes: React.FC = () => {
 
     return (
         <div>
-            <h1>Rotacoes Page</h1>
+            <h1 className='class-name'>Rotacoes Page</h1>
         </div>
     );
 };

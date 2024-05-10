@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { parseCsv } from '../../utils/csvUtils';  
 import { Membro } from '../../types/csvTypes';  
+
+import './Membros.css';
 // import component1, component2 from '../../components/Membros/{Component}';
 
 const Membros: React.FC = () => {
@@ -18,7 +20,7 @@ const Membros: React.FC = () => {
 
     return (
         <div>
-            <h1>Membros Page</h1>
+            <h1 className='class-name'>Membros Page</h1>
             {/* Add your content here */}
         </div>
     );

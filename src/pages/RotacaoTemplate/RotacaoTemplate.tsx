@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { parseCsv } from '../../utils/csvUtils';  
 import { Rotacao, Projeto, Membro, RotacaoMembrosFeedback, Diretoria } from '../../types/csvTypes'; 
 
+import './RotacaoTemplate.css';
 // import component1, component2 from '../../components/RotacaoTemplate/{Component}';
 
 // Para acessar essa página, acesse /rotacoes/:id
@@ -57,7 +58,7 @@ const RotacaoTemplate: React.FC = () => {
 
   return (
     <div>
-        <h1>Dynamic Page</h1>
+        <h1 className='class-name'>Dynamic Page</h1>
         <p>This is a dynamic page for item ID: {id}</p>
     </div>
   );

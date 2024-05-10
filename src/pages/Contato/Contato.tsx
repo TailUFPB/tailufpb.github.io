@@ -1,11 +1,12 @@
 import React from 'react';
 
+import './Contato.css';
 // import component1, component2 from '../../components/Contato/{Component}';
 
 const Contato: React.FC = () => {
     return (
         <div>
-            <h1>Contato</h1>
+            <h1 className='class-name'>Contato</h1>
             {/* Add your contact form or content here */}
         </div>
     );
