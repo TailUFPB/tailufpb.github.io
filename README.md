@@ -16,8 +16,8 @@ Assim ficou a divisão das telas (se eu me lembro bem, qualquer coisa, editar):
 
 - Tiago: Landing Page e Rotações (Página com a lista das rotações para clicar e acessar cada uma = "Rotacoes")
 - Tiago: Footer e NavBar
-- Duda: Membros
-- Bruna: Projetos
+- Duda: Projetos
+- Bruna: Membros
 - Raphael: Rotação (Página de uma rotação específica, todos os seus projetos = "RotacaoTemplate")
 - Ana: Contato e Sobre
 
