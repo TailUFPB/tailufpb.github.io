@@ -2,12 +2,13 @@ import React from 'react';
 
 import './LandingPage.css';
 // import component1, component2 from '../../components/LandingPage/{Component}';
+import HeroLogo from '../../assets/landing-page-logo.png';
 
 const LandingPage: React.FC = () => {
     return (
-        <div>
-            <h1 className='class-name'>Welcome to the Landing Page!</h1>
-            {/* Add your content here */}
+        <div className='landing-page-container'>
+            <h1 className="hero-text">TAIL</h1>
+            <img src={HeroLogo} alt="Hero" className="hero-image" />
         </div>
     );
 };

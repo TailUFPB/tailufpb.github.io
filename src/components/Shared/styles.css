@@ -1,0 +1,54 @@
+.navbar-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    background-color: #000000;
+    height: 10vh;
+    z-index: 100;
+}
+
+.navbar-routes-elements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    flex-direction: row;
+}
+
+.navbar-routes-elements a {
+    color: #19E2FE;
+    text-decoration: none; 
+    position: relative;
+    font-weight: 600;
+}
+
+.navbar-routes-elements a::after {
+    content: ""; 
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #19E2FE;
+    transition: width 0.3s; 
+}
+
+.navbar-routes-elements a:hover::after {
+    width: 100%;
+}
+
+.navbar-brazil-flag img {
+    position: relative;
+    width: 25px;
+    height: auto;
+    cursor: pointer;
+}
+
+.navbar-logo img {
+    position: relative;
+    width: 60px;
+    height: auto;
+    cursor: pointer;
+}
