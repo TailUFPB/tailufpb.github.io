@@ -20,7 +20,7 @@ const Membros: React.FC = () => {
 
     return (
         <div>
-            <h1 className='class-name'>Membros Page</h1>
+            <h1 className='membro-header'>Membros Page</h1>
             {/* Add your content here */}
         </div>
     );

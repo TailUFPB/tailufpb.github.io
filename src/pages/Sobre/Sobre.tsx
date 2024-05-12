@@ -6,7 +6,7 @@ import './Sobre.css';
 const Sobre: React.FC = () => {
     return (
         <div>
-            <h1 className='class-name'>Sobre Page</h1>
+            <h1 className='sobre-header'>Sobre Page</h1>
             <p>This is the Sobre page.</p>
         </div>
     );

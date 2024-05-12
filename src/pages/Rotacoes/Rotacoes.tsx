@@ -28,7 +28,7 @@ const Rotacoes: React.FC = () => {
 
     return (
         <div>
-            <h1 className='class-name'>Rotacoes Page</h1>
+            <h1 className='rotacoes-header'>Rotacoes Page</h1>
         </div>
     );
 };

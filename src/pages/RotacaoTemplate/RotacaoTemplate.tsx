@@ -58,7 +58,7 @@ const RotacaoTemplate: React.FC = () => {
 
   return (
     <div>
-        <h1 className='class-name'>Dynamic Page</h1>
+        <h1 className='rotacao-header'>Dynamic Page</h1>
         <p>This is a dynamic page for item ID: {id}</p>
     </div>
   );
