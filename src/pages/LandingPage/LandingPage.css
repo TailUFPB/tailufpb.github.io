@@ -3,23 +3,39 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 120vh;
     background-color: #000000;
 }
 
 .hero-text {
     position: absolute;
-    font-size: 92vh;
+    font-size: 40vw;
     text-align: center;
     z-index: 0; 
     color: #19E2FE;
-    transform: translateY(-3%);
+    transform: translateY(-11%);
     user-select: none;
 }
 
 .hero-image {
     position: relative; 
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
     z-index: 1; 
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 1rem;
+    z-index: 1;
+    font-weight: 300;
+}
+
+.landing-page-socials {
+    margin: 1rem;
+    display: flex;
+    width: 11%;
+    max-width: 60%;
+    justify-content: space-between;
 }
