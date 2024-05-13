@@ -110,3 +110,7 @@
     width: 45px;
     height: 45px;
 }
+
+.ball {
+    transition: all 0.1s ease;
+}
