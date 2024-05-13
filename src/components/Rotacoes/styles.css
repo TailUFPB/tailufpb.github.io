@@ -1,0 +1,15 @@
+.rotacao-button {
+    background-color: #18181C;
+    border: 1px solid #909090;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 75px 65px;
+    padding: 5px 10px;
+    width: 285px;
+    height: 125px;
+
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #FFFFFF;
+}

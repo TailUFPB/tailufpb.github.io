@@ -11,7 +11,9 @@ const Footer: React.FC = () => {
     return (
         <footer className='footer-container'>
             <div className='footer-logo'>
-                <img src={FooterLogo} alt="Footer Logo" />
+                <a href="/">
+                    <img src={FooterLogo} alt="Footer Logo" />
+                </a>
             </div>
             <div className='footer-content'>
                 <ul className='footer-routes-elements'>

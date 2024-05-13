@@ -13,8 +13,8 @@ import RotacaoTemplate from './pages/RotacaoTemplate/RotacaoTemplate';
 import Membros from './pages/Membros/Membros';
 import Projetos from './pages/Projetos/Projetos';
 import Contato from './pages/Contato/Contato';
-import NavBar from './components/Shared/NavBar';
-import Footer from './components/Shared/Footer';
+import NavBar from './components/NavBar and Footer/NavBar';
+import Footer from './components/NavBar and Footer/Footer';
 
 function App() {
   return (
