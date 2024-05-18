@@ -53,6 +53,7 @@ const Rotacoes: React.FC = () => {
                     {periodos.map((periodo, index) => (
                         <RotacaoButton key={index} text={transformPeriodo(periodo)} link={periodo} clickable={true} />
                     ))}
+                    <RotacaoButton key="em-breve" text="Em Breve" link={""} clickable={false} />
                 </div>
             </div>
         </div>
