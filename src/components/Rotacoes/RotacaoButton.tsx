@@ -10,11 +10,13 @@ interface RotacaoButtonProps {
 const RotacaoButton: React.FC<RotacaoButtonProps> = ({ text, link, clickable }) => {
     if (!clickable) {
         return (
+        <a className='rotacao-button-container'>
             <button className='rotacao-button'>{text}</button>
+        </a>
         );
     }
     return (
-        <a href={`/rotacoes/${link}`}>
+        <a href={`/rotacoes/${link}`} className='rotacao-button-container'>
             <button className='rotacao-button'>{text}</button>
         </a>
     );

@@ -3,8 +3,6 @@
     border: 1px solid #909090;
     border-radius: 20px;
     cursor: pointer;
-    margin: 70px 70px;
-    padding: 5px 10px;
     width: 285px;
     height: 125px;
 
@@ -12,4 +10,13 @@
     font-weight: 600;
     color: #FFFFFF;
     font-family: "SF Pro Display", sans-serif;
+}
+
+.rotacao-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin: 70px 70px;
+    padding: 5px 10px;
 }
