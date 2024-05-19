@@ -1,0 +1,40 @@
+.diretoria-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 100px;
+    background-color: #f0f0f0;
+}
+
+/* Estilo para o contêiner da diretoria */
+.diretoria-container {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  /* Estilo para o cabeçalho da diretoria */
+  .diretoria-header {
+    margin-bottom: 5px;
+  }
+  
+  /* Estilo para o nome da diretoria */
+  .diretoria-header h3 {
+    margin: 0;
+  }
+  
+  /* Estilo para as informações do diretor (quando expandido) */
+  .diretor-info {
+    margin-top: 10px;
+  }
+  
+  /* Estilo para o texto do diretor */
+  .diretor-info p {
+    margin: 0;
+  }
+
+  

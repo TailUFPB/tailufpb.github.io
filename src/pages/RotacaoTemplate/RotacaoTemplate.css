@@ -1,3 +1,27 @@
 .rotacao-header {
     color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    flex-direction: row;
+    list-style-type: none; 
+}
+
+.rotacao-header h1 {
+    color: #19E2FE;
+    text-decoration: none; 
+    position: relative;
+    font-weight: 600;
+}
+
+.rotacao-header h1::after {
+    content: ""; 
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #19E2FE;
+    width: 100%;
 }
