@@ -1,3 +1,77 @@
-.projeto-header {
+.projetos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding: 20px; /* Espaçamento interno */
+    max-width: 750px; /* Largura máxima do contêiner */
+    margin: 0 auto; /* Centraliza horizontalmente */
+  }
+  
+  .titulo {
     color: white;
+    text-align: center;
+    font-size: 55px; /* Ajuste o tamanho conforme necessário */
+  }
+
+  .subtitulo {
+    color: white;
+    text-align: center;
+    margin-top: -30px; /* Adiciona um espaçamento entre os textos */
+    font-size: 23px;
+  }
+
+  .image-container {
+    border: 1px solid white; /* Borda branca sólida de 1px */
+    border-radius: 40px; /* Bordas arredondadas */
+    overflow: hidden; /* Para garantir que a borda não exceda a imagem */
+    width: 1100px; /* Largura máxima do contêiner da imagem */
+    height: 500px;
+    margin: 20px auto; /* Centraliza horizontalmente e adiciona espaço abaixo */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que os elementos sejam quebrados em várias linhas */
+  }
+  
+  .image-container img {
+    width: 500px; /* Garante que a imagem ocupe 100% da largura do contêiner */
+    display: block; /* Remove o espaço extra abaixo da imagem */
+    
+  }
+
+  .text-content {
+    color: white;
+    width: 50%; /* Metade da largura do contêiner */
+    text-align: center; /* Centraliza o texto */
+    font-size: 30px;
+  }
+
+  .text-content h2{
+    color: rgb(7, 216, 253);
+  }
+
+  .additional-texts {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px; /* Adiciona espaço acima dos textos adicionais */
 }
+
+.additional-text {
+    background-color: rgb(255, 81, 0); /* Cor de fundo laranja */
+    border-radius: 60px; /* Bordas arredondadas */
+    padding: 10px 15px; /* Ajuste do padding */
+    margin-right: 10px; /* Adiciona espaço à direita do texto adicional */
+  }
+  
+  .additional-text:last-child {
+    margin-right: 0; /* Remove o espaço à direita do último texto adicional */
+  }
+  
+
+.additional-text p {
+  color: white;
+  font-size: 27px;
+}
+  
+ 
