@@ -13,6 +13,7 @@ export interface Membro {
   status_mem: string;
   cargo_mem: string;
   website_mem: string;
+  imagem_mem: string;
 }
 
 export interface Projeto {
@@ -22,6 +23,7 @@ export interface Projeto {
   tipo_proj: string;
   completo_proj: string;
   link_proj: string;
+  imagem_proj: string;
 }
 
 export interface Rotacao {
