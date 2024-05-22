@@ -116,5 +116,5 @@
   height: 100%;
   z-index: -1;
   pointer-events: none;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.2)); /* Valores de transparência ajustados para 0.2 */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.2));
 }
