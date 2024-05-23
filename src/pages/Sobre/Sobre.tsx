@@ -58,7 +58,7 @@ const Sobre: React.FC = () => {
           estimular e divulgar<br /> estudos científicos, publicações e cursos.</p>
         </div>
       </section>
-      <div className="page-gradient" /> {/* degradê que acompanha o scroll, abaixo de todos os elementos */}
+      <div className="page-gradient" />
     </div>
   );
 }
