@@ -1,0 +1,15 @@
+/* styles.css */
+.button-back {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .button-back:hover {
+    background-color: #0056b3;
+  }
+  

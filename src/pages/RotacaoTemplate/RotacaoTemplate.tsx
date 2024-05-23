@@ -14,6 +14,7 @@ import {
 import './RotacaoTemplate.css';
 import BackgroundTemplate from '../../components/Background Template/BackgroundTemplate';
 import DiretoriaContainer from '../../components/DiretoriaContainer/DiretoriaContainer';
+import BackButton from '../../components/BackButton/BackButton';
 // import component1, component2 from '../../components/RotacaoTemplate/{Component}';
 
 // Para acessar essa página, acesse /rotacoes/:id
@@ -21,26 +22,19 @@ const RotacaoTemplate: React.FC = () => {
   const { id } = useParams<'id'>();
 
   // dados de cada tabela
-  const [rotacaoData, setRotacaoData] = useState<Rotacao[]>([]);
   const [dfRotacao, setDfRotacao] = useState<DataFrame | null>(null);
-
-  const [projetoData, setProjetoData] = useState<Projeto[]>([]);
-
-  const [membroData, setMembroData] = useState<Membro[]>([]);
-  const [rotacaoMembrosFeedbackData, setRotacaoMembrosFeedbackData] = useState<RotacaoMembrosFeedback[]>([]);
-  
-  const [diretoriaData, setDiretoriaData] = useState<Diretoria[]>([]);
+  const [dfProjeto, setDfProjeto] = useState<DataFrame | null>(null);
+  const [dfMembro, setDfMembro] = useState<DataFrame | null>(null);
+  const [dfRotacaoMembrosFeedback, setDfRotacaoMembrosFeedback] = useState<DataFrame | null>(null);
   const [dfDiretoria, setDfDiretoria] = useState<DataFrame | null>(null);
 
-  const [mergedData, setMergedData] = useState<DataFrame | null>(null);
-
   const [uniqueNomeDir, setUniqueNomeDir] = useState<string[]>([]);
-  const [uniqueIdRot, setUniqueIdRot] = useState<number[]>([]);
+  const [diretoria, setDiretoria] = useState<{ [key: string]: { lider: string; diretor: string; projetos: { nome_proj: string; descricao_proj: string }[] } }>({});
+  const [membros, setMembros] = useState<string[]>([]);
 
   useEffect(() => {
     parseCsv<Rotacao>('/data/rotacao.csv').then(data => {
       if (data) {
-        setRotacaoData(data);
         const df = new DataFrame(data);
         setDfRotacao(df);
       }
@@ -48,7 +42,6 @@ const RotacaoTemplate: React.FC = () => {
 
     parseCsv<Diretoria>('/data/diretoria.csv').then(data => {
       if (data) {
-        setDiretoriaData(data);
         const df = new DataFrame(data);
         setDfDiretoria(df);
       }
@@ -56,32 +49,30 @@ const RotacaoTemplate: React.FC = () => {
 
     parseCsv<Projeto>('/data/projeto.csv').then(data => {
       if (data) {
-        setProjetoData(data);
+        const df = new DataFrame(data);
+        setDfProjeto(df);
       }
     });
 
     parseCsv<Membro>('/data/membro.csv').then(data => {
       if (data) {
-        setMembroData(data);
+        const df = new DataFrame(data);
+        setDfMembro(df);
       }
     });
 
     parseCsv<RotacaoMembrosFeedback>('/data/rotacao_membros_feedback.csv').then(data => {
       if (data) {
-        setRotacaoMembrosFeedbackData(data);
+        const df = new DataFrame(data);
+        setDfRotacaoMembrosFeedback(df);
       }
     });
     
   }, []);
 
   useEffect(() => {
-    if (dfRotacao && dfDiretoria) {
-      // Mesclar os DataFrames com base nas colunas de chave
-      console.log("dfrotacao:", dfRotacao.toString());
-      console.log("dfDiretoria:", dfDiretoria.toString());
-      console.log("Chaves de mesclagem em dfRotacao:", dfRotacao.getSeries("id_rot_dir").distinct().toArray());
-      console.log("Chaves de mesclagem em dfDiretoria:", dfDiretoria.getSeries("id_dir").distinct().toArray());
-
+    if (dfRotacao && dfDiretoria && dfProjeto && dfMembro && dfRotacaoMembrosFeedback) {
+ 
       const merged = dfRotacao.join(
             dfDiretoria,
             leftRow => leftRow.id_rot_dir,
@@ -91,56 +82,66 @@ const RotacaoTemplate: React.FC = () => {
             }
         );
 
-      console.log("Merged Data:", merged.toString());
+      const mergedMem = dfMembro.join(
+        dfRotacaoMembrosFeedback,
+        leftRow => leftRow.id_mem,
+        rightRow => rightRow.id_rot_mem_fbk_membro,
+        (leftRow, rightRow) => {
+          return { ...leftRow, ...rightRow };
+        }
+      );
 
-      // // Extrair valores únicos de 'nome_dir' e 'id_rot'
+      if (!dfProjeto || !dfMembro || !merged || !mergedMem) {
+        console.error("Um ou mais DataFrames estão indefinidos.");
+        return;
+      }
+
       const filteredData = merged.where(row => row.periodo_rot === id);
+
       const uniqueNames = filteredData.getSeries("nome_dir").distinct().toArray();
       const uniqueIds = filteredData.getSeries("id_rot").distinct().toArray();
 
-      console.log("Nomes únicos de diretoria:", uniqueNames);
-      console.log("IDs únicos de rotacao:", uniqueIds);
+      const membros = mergedMem
+      .where(row => row.id_rot_mem_fbk_rotacao === uniqueIds[0])
+      .getSeries('nome_mem')
+      .toArray();
 
+      setMembros(membros);
+
+      const result = uniqueNames.reduce((acc, nomeDir) => {
+        // Filtrar dados para o nome_dir atual
+        const currentDirData = filteredData.where(row => row.nome_dir === nomeDir);
+      
+        const projetoIds = currentDirData.getSeries("id_rot_proj").distinct().toArray();
+      
+        const projetos = dfProjeto.where(row => projetoIds.includes(row.id_proj))
+          .select(row => ({
+            nome_proj: row.nome_proj,
+            descricao_proj: row.descricao_proj
+          }))
+          .toArray();
+    
+        const liderId = currentDirData.getSeries("id_rot_mem_lider").distinct().toArray();
+        const diretorId = currentDirData.getSeries("id_rot_mem_diretor").distinct().toArray();
+
+        console.log("LiderId:", liderId);
+        console.log("DiretorId:", diretorId);
+      
+        const lider = dfMembro.where(row => row.id_mem === liderId).select(row => row.nome_mem);
+        const diretor = dfMembro.where(row => row.id_mem === diretorId).select(row => row.nome_mem);
+      
+        acc[nomeDir] = {
+          lider: lider,
+          diretor: diretor,
+          projetos: projetos
+        };
+        return acc;
+      }, {} as { [key: string]: { lider: string; diretor: string; projetos: { nome_proj: string; descricao_proj: string }[] } });
+      
+      setDiretoria(result);
       setUniqueNomeDir(uniqueNames);
-      setUniqueIdRot(uniqueIds);
     }
   }, [dfRotacao, dfDiretoria]);
-
-  // console.log("Merged Data:", mergedData.toString());
-
-  // Original 
-  // useEffect(() => {
-  //   parseCsv<Rotacao>('/data/rotacao.csv').then(data => {
-  //     if (data) {
-  //       setRotacaoData(data);
-
-  //     }
-  //   });
-
-  //   parseCsv<Projeto>('/data/projeto.csv').then(data => {
-  //     if (data) {
-  //       setProjetoData(data);
-  //     }
-  //   });
-
-  //   parseCsv<Membro>('/data/membro.csv').then(data => {
-  //     if (data) {
-  //       setMembroData(data);
-  //     }
-  //   });
-
-  //   parseCsv<RotacaoMembrosFeedback>('/data/rotacao_membros_feedback.csv').then(data => {
-  //     if (data) {
-  //       setRotacaoMembrosFeedbackData(data);
-  //     }
-  //   });
-
-  //   parseCsv<Diretoria>('/data/diretoria.csv').then(data => {
-  //     if (data) {
-  //       setDiretoriaData(data);
-  //     }
-  //   });
-  // }, []);
 
   const transformPeriodo = (periodo: string): string => {
     const [year, half] = periodo.split('_');
@@ -157,8 +158,9 @@ const RotacaoTemplate: React.FC = () => {
         <div className='rotacoes-page-content'>
             <h1 className='rotacoes-header'>{id && transformPeriodo(id)}<span className="dots">:</span></h1>
             {uniqueNomeDir.map((nomeDir, index) => (
-              <DiretoriaContainer diretoria={nomeDir} diretor="João" />
+              <DiretoriaContainer diretoria={diretoria} membros={membros}/>
             ))}
+            <BackButton />
         </div>
     </div>
   );
