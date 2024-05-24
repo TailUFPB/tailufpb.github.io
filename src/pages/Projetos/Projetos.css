@@ -27,11 +27,13 @@
     overflow: hidden; /* Para garantir que a borda não exceda a imagem */
     width: 1100px; /* Largura máxima do contêiner da imagem */
     height: 500px;
-    margin: 20px auto; /* Centraliza horizontalmente e adiciona espaço abaixo */
+    margin: 570px auto; /* Centraliza horizontalmente e adiciona espaço abaixo */
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap; /* Permite que os elementos sejam quebrados em várias linhas */
+    margin-top: -550px;
+    padding: 50px;
   }
   
   .image-container img {
@@ -60,8 +62,8 @@
 .additional-text {
     background-color: rgb(255, 81, 0); /* Cor de fundo laranja */
     border-radius: 60px; /* Bordas arredondadas */
-    padding: 10px 15px; /* Ajuste do padding */
-    margin-right: 10px; /* Adiciona espaço à direita do texto adicional */
+    padding: 0px 20px 0px 20px;
+    margin-right: 20px; /* Adiciona espaço à direita do texto adicional */
   }
   
   .additional-text:last-child {
