@@ -12,6 +12,7 @@ const LandingPage: React.FC = () => {
         <div className='landing-page-container'>
             <h1 className="hero-text">TAIL</h1>
             <img src={HeroLogo} alt="Hero" className="hero-image" />
+            <div className="hero-logo-shadow"></div> 
             <h1 className="hero-subtitle">Technology and Artificial Intelligence League</h1>
             <div className='landing-page-socials'>
                 <a href='https://www.instagram.com/tailufpb/'>
