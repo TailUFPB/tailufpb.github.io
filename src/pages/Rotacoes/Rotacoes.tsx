@@ -9,12 +9,10 @@ import RotacaoButton from '../../components/Rotacoes/RotacaoButton';
 
 const Rotacoes: React.FC = () => {
     const [periodos, setPeriodos] = useState<string[]>([]);
-    const [allData, setAllData] = useState<Rotacao[]>([]);
 
     useEffect(() => {
         parseCsv<Rotacao>('/data/rotacao.csv').then(data => {
             if (data) {
-                setAllData(data);
                 // Creating a DataFrame from the data
                 const df = new DataFrame(data);
                 // Extracting unique periods and sorting

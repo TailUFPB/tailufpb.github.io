@@ -22,6 +22,7 @@
     width: 100%;
     height: 55vh;
     border-radius: 70% 70% 0 0;
+    border: 1px solid black;
 }
 
 .background-headers {
