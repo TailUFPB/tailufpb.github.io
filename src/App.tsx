@@ -4,6 +4,7 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
 
 import LandingPage from './pages/LandingPage/LandingPage';
 
@@ -16,7 +17,23 @@ import Contato from './pages/Contato/Contato';
 import NavBar from './components/NavBar and Footer/NavBar';
 import Footer from './components/NavBar and Footer/Footer';
 
+
 function App() {
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+  
+  if (isMobile) {
+    return (
+      <div>
+        <NavBar />
+        <Router>
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+          </Routes>
+        </Router>
+        <Footer />
+      </div>
+    );
+  }
   return (
     <div>
       <NavBar />

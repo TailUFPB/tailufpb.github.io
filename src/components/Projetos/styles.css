@@ -1,0 +1,120 @@
+.project-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    width: 70%;
+    height: 27rem;
+    border: 1px solid #909090;
+    border-radius: 45px;
+    padding: 40px;
+    margin: 30px;
+}
+
+.upper-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85%;
+    width: 100%;
+}
+
+.lower-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 15%;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.lower-content-2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 15%;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.image-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    margin: 0;
+}
+
+.image-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    margin: 0;
+}
+
+.additional-texts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+}
+
+.additional-text {
+    background-color: #E35C32;
+    border-radius: 30px;
+    padding: 30px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-right: 20px;
+}
+
+.additional-text p {
+    font-family: "SF Pro Display", sans-serif;
+    color: white;
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.text-content h2 {
+    font-family: "SF Pro Display", sans-serif;
+    color: #19E2FE;
+    width: 90%;
+    text-align: center;
+    font-size: 2.6rem;
+}
+
+.text-content p {
+    font-family: "SF Pro Display", sans-serif;
+    color: white;
+    width: 90%;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.rot-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.rot-content a {
+    text-decoration: none;
+}

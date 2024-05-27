@@ -1,10 +1,24 @@
 import React from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 import './styles.css';
 
 import NavBarLogo from '../../assets/navbar-logo.png';
 
 const NavBar: React.FC = () => {
+    const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+
+    if (isMobile) {
+        return (
+            <nav className='navbar-container'>
+                <div className='navbar-logo'>
+                    <a href="/">
+                        <img src={NavBarLogo} alt="NavBar Logo" />
+                    </a>
+                </div>
+            </nav>
+        );
+    }
     return (
         <nav className='navbar-container'>
             <div className='navbar-logo'>
