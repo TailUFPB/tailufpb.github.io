@@ -37,9 +37,15 @@
     margin: 1rem;
     margin-top: 5rem;
     display: flex;
-    width: 11%;
+    width: 100%;
     max-width: 60%;
-    justify-content: space-between;
+    justify-content: center;
+}
+
+.landing-page-socials a {
+    margin: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .hero-logo-shadow {

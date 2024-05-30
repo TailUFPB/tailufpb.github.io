@@ -1,5 +1,4 @@
 import React from 'react';
-import { useMediaQuery } from 'react-responsive';
 
 import './styles.css';
 import FooterLogo from '../../assets/footer-logo.png';
@@ -9,20 +8,6 @@ import LinkedinSVG from '../../assets/socials/linkedin.svg';
 import GithubSVG from '../../assets/socials/github.svg';
 
 const Footer: React.FC = () => {
-    const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
-    
-    if (isMobile) {
-        return (
-            <footer className='footer-container'>
-                <div className='footer-logo'>
-                    <a href="/">
-                        <img src={FooterLogo} alt="Footer Logo" />
-                    </a>
-                </div>
-        
-            </footer>
-        );
-    };
     return (
         <footer className='footer-container'>
             <div className='footer-logo'>

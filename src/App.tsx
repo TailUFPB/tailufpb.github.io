@@ -24,13 +24,7 @@ function App() {
   if (isMobile) {
     return (
       <div>
-        <NavBar />
-        <Router>
-          <Routes>
-            <Route path="/" element={<LandingPage />} />
-          </Routes>
-        </Router>
-        <Footer />
+        <LandingPage />
       </div>
     );
   }

@@ -100,6 +100,7 @@ const Projetos: React.FC = () => {
             <div className='projetos-page-content'>
                 {projetos.map(projeto => (
                     <IndividualProject
+                    key = {projeto.index}
                         index={projeto.index}
                         id_proj={projeto.id_proj}
                         nome_proj={projeto.nome_proj}

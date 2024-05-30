@@ -34,7 +34,9 @@ const IndividualProject: React.FC<ProjetoData> = (props) => {
                     </div>
                     <div className="text-content">
                         <h2>{props.nome_proj}</h2>
-                        <p>{props.descricao_proj}</p>
+                        <div className="project-description">
+                             <p>{props.descricao_proj}</p>
+                        </div>
                     </div>
                 </div>
                 <div className='lower-content'>
@@ -61,7 +63,9 @@ const IndividualProject: React.FC<ProjetoData> = (props) => {
                 <div className='upper-content'>
                     <div className="text-content">
                         <h2>{props.nome_proj}</h2>
-                        <p>{props.descricao_proj}</p>
+                        <div className="project-description">
+                             <p>{props.descricao_proj}</p>
+                        </div>
                     </div>
                     <div className="image-content">
                         <img src={props.imagem_proj_url} alt="Descrição da imagem" />
