@@ -1,13 +1,8 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 
 import LandingPage from './pages/LandingPage/LandingPage';
-
 import Sobre from './pages/Sobre/Sobre';
 import Rotacoes from './pages/Rotacoes/Rotacoes';
 import RotacaoTemplate from './pages/RotacaoTemplate/RotacaoTemplate';
@@ -17,10 +12,9 @@ import Contato from './pages/Contato/Contato';
 import NavBar from './components/NavBar and Footer/NavBar';
 import Footer from './components/NavBar and Footer/Footer';
 
-
 function App() {
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
-  
+
   if (isMobile) {
     return (
       <div>
