@@ -3,7 +3,9 @@ import { ParseResult } from 'papaparse';
 
 export const parseCsv = async <T>(filePath: string): Promise<T[] | null> => {
   try {
-    const response = await fetch(filePath);
+    const filePathNew = process.env.PUBLIC_URL + filePath;
+    
+    const response = await fetch(filePathNew);
     const reader = response.body?.getReader(); 
     const result = await reader?.read(); 
     const decoder = new TextDecoder('utf-8');
