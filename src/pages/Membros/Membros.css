@@ -1,5 +1,6 @@
 .membro-header {
     color: white;
+    margin-top: 3rem
 }
 
 .membros-page-container {
@@ -44,14 +45,14 @@
 .circles-presidencia,
 .circles-diretores1 {
     display: flex;
-    flex-wrap: wrap; /* Permite que os itens que não cabem na linha sejam movidos para a próxima linha */
-    gap: 20px; /* Espaçamento entre os círculos */
-    justify-content: center; /* Centraliza os itens horizontalmente */
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: center; 
 }
 
 .circle {
-    width: 125px; /* Ajuste o tamanho conforme necessário */
-    height: 120px; /* Ajuste o tamanho conforme necessário */
+    width: 125px; 
+    height: 120px; 
     border-radius: 50%;
     background-size: cover;
     background-position: center;
@@ -66,5 +67,17 @@
     justify-content: center;
     width: 70%;
     height: 100%;
+}
 
+[data-tooltip]::before {
+    position : absolute;
+    content : attr(data-tooltip);
+    background: white;
+    padding: 4px;
+    border-radius: 8px;
+    opacity : 0;
+}
+
+[data-tooltip]:hover::before {
+    opacity : 1;
 }

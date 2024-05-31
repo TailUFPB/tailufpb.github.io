@@ -1,15 +1,15 @@
 .rotacoes-button {
-    background: linear-gradient(60deg, #19E2FE, #1F54EE);
-    color: white;
-    border: none;
-    padding: 5px 15px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-  }
+  padding: 10px 20px;
+  font-size: 16px;
+  background-image: linear-gradient(to right,#19E2FE, #1F54EE);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
   
-  .rotacoes-button:hover {
-    opacity: 0.9;
-  }
-  
-  
+.rotacoes-button:hover {
+  background-color: #0056b3;
+  opacity: .9;
+}  

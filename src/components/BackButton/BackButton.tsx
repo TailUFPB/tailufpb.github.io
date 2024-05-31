@@ -12,7 +12,6 @@ const BackButton: React.FC = () => {
   return (
     <div>
       <button className="button-back" onClick={handleBackClick}>Voltar</button>
-      {/* Resto do conteúdo da página */}
     </div>
   );
 };

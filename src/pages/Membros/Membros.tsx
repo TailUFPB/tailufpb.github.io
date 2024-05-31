@@ -5,9 +5,6 @@ import { Membro } from '../../types/csvTypes';
 import './Membros.css';
 import BackgroundTemplate from '../../components/Background Template/BackgroundTemplate';
 import RotacoesButton from '../../components/RotaçoesButton/RotaçoesButton';
-// import component1, component2 from '../../components/Membros/{Component}';
-
-
 
 const Membros: React.FC = () => {
     const [membros, setMembros] = useState<Membro[]>([]); // Dados da tabela Membro -> Lista de diciionários coluna:valor
@@ -19,8 +16,6 @@ const Membros: React.FC = () => {
             }
         });
     }, []);
-
-    console.log(membros);
 
     return (
         <div className='membros-page-container'>
@@ -34,7 +29,7 @@ const Membros: React.FC = () => {
                 </div>
                 <div className="circles-professores">
                         {membros.filter(membro => membro.cargo_mem === 'Professor(a)').map((membro) => (
-                            <div key={membro.id_mem} className="circle" style={{ backgroundImage: `url(${membro.imagem_mem_url})` }} ></div>
+                            <div key={membro.id_mem} className="circle" style={{ backgroundImage: `url(${membro.imagem_mem_url})` }} data-tooltip={membro.nome_mem}></div>
                         ))}
                     </div>
                 <div></div>
@@ -43,9 +38,12 @@ const Membros: React.FC = () => {
                 </div>
                 <div className='page-content-fundadores'>
                     <div className="circles-fundadores">
-                            {membros.filter(membro => membro.cargo_mem === 'Fundador').map((membro) => (
-                                <div key={membro.id_mem} className="circle" style={{ backgroundImage: `url(${membro.imagem_mem_url})` }} ></div>
-                            ))}
+                    {membros.filter(membro => membro.cargo_mem === 'Fundador').map((membro) => (
+                        <div key={membro.id_mem} className="circle" style={{ 
+                            backgroundImage: `url(${membro.imagem_mem_url})`}} 
+                            data-tooltip={membro.nome_mem}>
+                         </div>
+                    ))}
                         </div>
                     <div>
                 </div>
@@ -54,7 +52,7 @@ const Membros: React.FC = () => {
                 </div>
                 <div className="circles-presidencia">
                     {membros.filter(membro => membro.cargo_mem === 'Presidente' || membro.cargo_mem === 'Vice presidente' ).map((membro) => (
-                        <div key={membro.id_mem} className='circle' style={{ backgroundImage: `url(${membro.imagem_mem_url})` }} ></div>
+                        <div key={membro.id_mem} className='circle' style={{ backgroundImage: `url(${membro.imagem_mem_url})` }} data-tooltip={membro.nome_mem}></div>
                     ))}
                 </div>
                 <div>
@@ -62,7 +60,7 @@ const Membros: React.FC = () => {
                 </div>
                 <div className="circles-diretores1">
                    {membros.filter(membro => membro.cargo_mem === 'Diretor').map((membro) => (
-                    <div key={membro.id_mem} className='circle' style={{ backgroundImage: `url(${membro.imagem_mem_url})` }} ></div> 
+                    <div key={membro.id_mem} className='circle' style={{ backgroundImage: `url(${membro.imagem_mem_url})` }} data-tooltip={membro.nome_mem}></div> 
                    ))}
                 </div>
                 <h2 className='membro-header'>Deseja conhecer o restante da nossa equipe<span className='dots'>?</span></h2>
@@ -70,8 +68,6 @@ const Membros: React.FC = () => {
                     <RotacoesButton/>
                 </div>
             </div>
-            
-            {/* Add your content here */}
         </div>
     );
 };

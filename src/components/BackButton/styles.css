@@ -1,15 +1,16 @@
 .button-back {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-image: linear-gradient(to right,#19E2FE, #1F54EE);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 600;
-  }
+  padding: 10px 20px;
+  font-size: 16px;
+  background-image: linear-gradient(to right,#19E2FE, #1F54EE);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
   
-  .button-back:hover {
-    background-color: #0056b3;
-  }
+.button-back:hover {
+  background-color: #0056b3;
+  opacity: .9;
+}
   

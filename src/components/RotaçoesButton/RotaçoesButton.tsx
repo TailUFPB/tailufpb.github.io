@@ -3,7 +3,7 @@ import './RotaçoesButton.css';
 
 const RotacoesButton: React.FC = () => {
   return (
-    <a href={`/rotacoes`}>
+    <a href={`#/rotacoes`}>
             <button className='rotacoes-button'>Rotações</button>
         </a>
   );
