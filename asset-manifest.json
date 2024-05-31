@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/tail-site/static/css/main.8f4d4197.css",
-    "main.js": "/tail-site/static/js/main.2303b710.js",
-    "static/js/453.cb9c9aa0.chunk.js": "/tail-site/static/js/453.cb9c9aa0.chunk.js",
-    "static/media/landing-page-logo.png": "/tail-site/static/media/landing-page-logo.9f880bf2d62193eec07b.png",
-    "static/media/footer-logo.png": "/tail-site/static/media/footer-logo.87496ca39497e08745ea.png",
-    "static/media/contato-logo.svg": "/tail-site/static/media/contato-logo.f5377c17566ca9c83e557e73ced8d925.svg",
-    "static/media/navbar-logo.png": "/tail-site/static/media/navbar-logo.ad522a658f6ff3832eae.png",
-    "static/media/white-logo.png": "/tail-site/static/media/white-logo.99935e68a512c26f70f6.png",
-    "static/media/instagram.svg": "/tail-site/static/media/instagram.affa073bbcdb41c1924a261d5a205a84.svg",
-    "static/media/insta-blue.svg": "/tail-site/static/media/insta-blue.4b1fbf7783203a19dba785cef2771abd.svg",
-    "static/media/github.svg": "/tail-site/static/media/github.5d7821af7074f3606efe46ba98983edf.svg",
-    "static/media/github-blue.svg": "/tail-site/static/media/github-blue.1322b08bed8d3444410cd15313aba051.svg",
-    "static/media/linkedin.svg": "/tail-site/static/media/linkedin.a242a37abe16628fe474c828e69b53be.svg",
-    "static/media/linkedin-blue.svg": "/tail-site/static/media/linkedin-blue.7f29cffc2ebe275a236c10bbc5e781cb.svg",
-    "index.html": "/tail-site/index.html",
-    "main.8f4d4197.css.map": "/tail-site/static/css/main.8f4d4197.css.map",
-    "main.2303b710.js.map": "/tail-site/static/js/main.2303b710.js.map",
-    "453.cb9c9aa0.chunk.js.map": "/tail-site/static/js/453.cb9c9aa0.chunk.js.map"
+    "main.css": "/static/css/main.6ce93cac.css",
+    "main.js": "/static/js/main.e4e490a2.js",
+    "static/js/453.cb9c9aa0.chunk.js": "/static/js/453.cb9c9aa0.chunk.js",
+    "static/media/landing-page-logo.png": "/static/media/landing-page-logo.9f880bf2d62193eec07b.png",
+    "static/media/footer-logo.png": "/static/media/footer-logo.87496ca39497e08745ea.png",
+    "static/media/contato-logo.svg": "/static/media/contato-logo.f5377c17566ca9c83e557e73ced8d925.svg",
+    "static/media/navbar-logo.png": "/static/media/navbar-logo.ad522a658f6ff3832eae.png",
+    "static/media/white-logo.png": "/static/media/white-logo.99935e68a512c26f70f6.png",
+    "static/media/instagram.svg": "/static/media/instagram.affa073bbcdb41c1924a261d5a205a84.svg",
+    "static/media/insta-blue.svg": "/static/media/insta-blue.4b1fbf7783203a19dba785cef2771abd.svg",
+    "static/media/github.svg": "/static/media/github.5d7821af7074f3606efe46ba98983edf.svg",
+    "static/media/github-blue.svg": "/static/media/github-blue.1322b08bed8d3444410cd15313aba051.svg",
+    "static/media/linkedin.svg": "/static/media/linkedin.a242a37abe16628fe474c828e69b53be.svg",
+    "static/media/linkedin-blue.svg": "/static/media/linkedin-blue.7f29cffc2ebe275a236c10bbc5e781cb.svg",
+    "index.html": "/index.html",
+    "main.6ce93cac.css.map": "/static/css/main.6ce93cac.css.map",
+    "main.e4e490a2.js.map": "/static/js/main.e4e490a2.js.map",
+    "453.cb9c9aa0.chunk.js.map": "/static/js/453.cb9c9aa0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8f4d4197.css",
-    "static/js/main.2303b710.js"
+    "static/css/main.6ce93cac.css",
+    "static/js/main.e4e490a2.js"
   ]
 }
