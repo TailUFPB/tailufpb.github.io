@@ -6,7 +6,7 @@ import FooterLogo from '../../assets/footer-logo.png';
 import InstagramSVG from '../../assets/socials/instagram.svg';
 import LinkedinSVG from '../../assets/socials/linkedin.svg';
 import GithubSVG from '../../assets/socials/github.svg';
-//a
+
 const Footer: React.FC = () => {
     return (
         <footer className='footer-container'>
@@ -17,11 +17,11 @@ const Footer: React.FC = () => {
             </div>
             <div className='footer-content'>
                 <ul className='footer-routes-elements'>
-                    <li><a href="/sobre">Sobre</a></li>
-                    <li><a href="/rotacoes">Rotações</a></li>
-                    <li><a href="/membros">Membros</a></li>
-                    <li><a href="/projetos">Projetos</a></li>
-                    <li><a href="/contato">Contato</a></li>
+                    <li><a href="#/sobre">Sobre</a></li>
+                    <li><a href="#/rotacoes">Rotações</a></li>
+                    <li><a href="#/membros">Membros</a></li>
+                    <li><a href="#/projetos">Projetos</a></li>
+                    <li><a href="#/contato">Contato</a></li>
                 </ul>
                 <div className='footer-socials'>
                     <a href='https://www.instagram.com/tailufpb/'>

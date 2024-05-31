@@ -25,7 +25,7 @@ function App() {
   return (
     <div>
       <NavBar />
-      <Router>
+      <Router basename='/'>
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/sobre" element={<Sobre />} />
