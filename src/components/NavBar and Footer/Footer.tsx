@@ -6,7 +6,7 @@ import FooterLogo from '../../assets/footer-logo.png';
 import InstagramSVG from '../../assets/socials/instagram.svg';
 import LinkedinSVG from '../../assets/socials/linkedin.svg';
 import GithubSVG from '../../assets/socials/github.svg';
-
+//a
 const Footer: React.FC = () => {
     return (
         <footer className='footer-container'>
