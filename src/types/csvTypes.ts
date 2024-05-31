@@ -13,7 +13,8 @@ export interface Membro {
   status_mem: string;
   cargo_mem: string;
   website_mem: string;
-  imagem_mem: string;
+  imagem_mem_url: string;
+  category: 'Professor' | 'Fundador' | 'Presidencia' | 'Diretor';
 }
 
 export interface Projeto {
