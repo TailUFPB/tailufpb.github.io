@@ -24,7 +24,7 @@ export interface Projeto {
   tipo_proj: string;
   completo_proj: string;
   link_proj: string;
-  imagem_proj: string;
+  imagem_proj_url: string;
 }
 
 export interface Rotacao {

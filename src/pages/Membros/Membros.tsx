@@ -10,7 +10,7 @@ const Membros: React.FC = () => {
     const [membros, setMembros] = useState<Membro[]>([]); // Dados da tabela Membro -> Lista de diciionários coluna:valor
 
     useEffect(() => {
-        parseCsv<Membro>('/data/membro (2).csv').then(data => {
+        parseCsv<Membro>('/data/membro.csv').then(data => {
             if (data) {
                 setMembros(data);
             }

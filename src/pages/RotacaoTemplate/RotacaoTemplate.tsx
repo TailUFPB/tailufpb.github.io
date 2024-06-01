@@ -52,14 +52,14 @@ const RotacaoTemplate: React.FC = () => {
       }
     });
 
-    parseCsv<Projeto>('/data/projeto_sem_imagem.csv').then(data => {
+    parseCsv<Projeto>('/data/projeto.csv').then(data => {
       if (data) {
         const df = new DataFrame(data);
         setDfProjeto(df);
       }
     });
 
-    parseCsv<Membro>('/data/membro_sem_imagem.csv').then(data => {
+    parseCsv<Membro>('/data/membro.csv').then(data => {
       if (data) {
         const df = new DataFrame(data);
         setDfMembro(df);

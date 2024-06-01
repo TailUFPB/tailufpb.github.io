@@ -32,7 +32,7 @@ const Projetos: React.FC = () => {
     const [dfDiretorias, setDfDiretorias] = useState<DataFrame | null>(null); // DataFrame dos dados da tabela Diretoria
 
     useEffect(() => {
-        parseCsv<Projeto>('/data/projeto_sem_imagem.csv').then(data => {
+        parseCsv<Projeto>('/data/projeto.csv').then(data => {
             if (data) {
                 const df = new DataFrame(data);
                 setDfProjetos(df);

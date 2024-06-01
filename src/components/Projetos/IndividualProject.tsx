@@ -46,7 +46,7 @@ const IndividualProject: React.FC<ProjetoData> = (props) => {
                                 <div className="additional-text">
                                     <p>{rotacao.diretoria}</p>
                                 </div>
-                                <a href={`/rotacoes/${rotacao.periodo_rot}`}>
+                                <a href={`#/rotacoes/${rotacao.periodo_rot}`}>
                                     <div className="additional-text">
                                         <p>{transformPeriodo(rotacao.periodo_rot)}</p>
                                     </div>
@@ -78,7 +78,7 @@ const IndividualProject: React.FC<ProjetoData> = (props) => {
                                 <div className="additional-text">
                                     <p>{rotacao.diretoria}</p>
                                 </div>
-                                <a href={`/rotacoes/${rotacao.periodo_rot}`}>
+                                <a href={`#/rotacoes/${rotacao.periodo_rot}`}>
                                     <div className="additional-text">
                                         <p>{transformPeriodo(rotacao.periodo_rot)}</p>
                                     </div>
