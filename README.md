@@ -1,4 +1,8 @@
-# Informações Básicas
+# Como atualizar o site
+
+O site utiliza gh-pages para construir a página estática. Para a atualizar o site é bem simples: após clonar o repositório, atualize os dados CSV presentes na pasta de dados com os dados mais novos (aqueles que devem ser pegos do sistema de cadastro, diretamente do streamlit), substituindo-os. Após isso, basta rodar "npm run deploy", e o gh-pages cuidará do resto, em teoria.
+
+# Informações Básicas - README.md durante a rotação
 
 O repositório já possui todos os arquivos das páginas já conectados ao App e com seus lugares já organizados. Basta editar a página respectiva para funcionar. O projeto é feito em React com **typescript**
 
